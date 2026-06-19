@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8"><title>DORIAN - Kirish</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0b0f19] text-slate-200 h-screen flex items-center justify-center p-4">
+    <div class="bg-[#070a12] border border-slate-900 p-8 rounded-2xl w-full max-w-sm text-center">
+        <h2 class="text-xl font-bold mb-2 text-white">DORIAN AI</h2>
+        <p class="text-xs text-slate-500 mb-6">Tizimga kirish yoki profil ochish</p>
+        <form action="/login" method="POST" class="space-y-4 text-left">
+            <div>
+                <label class="text-xs text-slate-400">Login (Username)</label>
+                <input type="text" name="username" required class="w-full bg-[#0b0f19] border border-slate-850 rounded-xl px-4 py-2.5 text-sm mt-1 outline-none text-slate-200 focus:border-slate-700">
+            </div>
+            <div>
+                <label class="text-xs text-slate-400">Parol</label>
+                <input type="password" name="password" required class="w-full bg-[#0b0f19] border border-slate-850 rounded-xl px-4 py-2.5 text-sm mt-1 outline-none text-slate-200 focus:border-slate-700">
+            </div>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 font-semibold py-2.5 rounded-xl text-sm transition pt-3">Kirish</button>
+        </form>
+        <p class="text-xs text-slate-500 mt-6">Akkauntingiz yo'qmi? <a href="/register" class="text-blue-500 hover:underline">Ro'yxatdan o'tish</a></p>
+    </div>
+</body>
+</html>
+
