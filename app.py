@@ -1,4 +1,14 @@
 import os
+from dotenv import load_dotenv
+
+# .env faylini o'qishni ishga tushiramiz
+load_dotenv()
+
+# Kalitlarni xavfsiz qutilardan olamiz
+API_KEY_1 = os.environ.get("GCP_API_KEY_1")
+API_KEY_2 = os.environ.get("GCP_API_KEY_2")
+API_KEY_3 = os.environ.get("GCP_API_KEY_3")
+API_KEY_4 = os.environ.get("GCP_API_KEY_4")
 import sqlite3
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for
 import google.generativeai as genai
@@ -12,7 +22,6 @@ UPLOAD_FOLDER = 'static/uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-API_KEYS = [ ""]
 
 def get_db_connection():
     conn = sqlite3.connect('database.db')
